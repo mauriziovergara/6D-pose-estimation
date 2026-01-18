@@ -1,0 +1,30 @@
+# Core Deep Learning
+torch>=2.0.0
+torchvision>=0.15.0
+torch-cuda-toolkit  # Optional: for GPU support
+
+# Object Detection & Vision
+ultralytics>=8.0.0
+opencv-python>=4.8.0
+
+# Data Processing & Scientific Computing
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+scikit-learn>=1.3.0
+
+# Image Processing
+Pillow>=10.0.0
+
+# Data Formats
+PyYAML>=6.0
+
+# Progress bars and logging
+tqdm>=4.65.0
+
+# 3D Mesh Processing (optional, for model loading)
+trimesh>=4.0.0
+
+# Jupyter support (optional)
+jupyter>=1.0.0
+ipython>=8.0.0

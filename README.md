@@ -200,12 +200,13 @@ Output: (Rotation: quat, Translation: [X, Y, Z])
 
 Multi-task learning with automatic weight balancing (Kendall et al.):
 
-$$L = \frac{1}{2\sigma_{rot}^2} L_{rot} + \frac{1}{2\sigma_{trans}^2} L_{trans} + \log(\sigma_{rot}) + \log(\sigma_{trans})$$
+$$L = \frac{1}{2\sigma_{rot}^2} L_{rot} \lambda_{rot} + \frac{1}{2\sigma_{trans}^2} L_{trans} \lambda_{trans} + \log(\sigma_{rot}) + \log(\sigma_{trans})$$
 
 Where:
 - $L_{rot}$ = Geodesic distance on SO(3) manifold (quaternion loss)
 - $L_{trans}$ = L2 distance for translation
 - $\sigma_{rot}, \sigma_{trans}$ = Learned uncertainty weights
+- $\lambda_{rot}, \lambda_{trans}$ = Constant weights (default = 1) that can be tuned (if needed)
 
 ## Evaluation Metrics
 
@@ -277,3 +278,4 @@ Example results on LineMOD (validation set):
 - LineMOD dataset creators
 - Ultralytics for YOLOv8
 - PyTorch team for the deep learning framework
+
